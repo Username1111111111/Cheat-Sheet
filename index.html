@@ -1,0 +1,2435 @@
+<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Techincal Documentation Page</title>
+</head>
+<body>
+	
+	<main id="main-doc">
+		
+		<nav id="navbar">
+      <header>Personal Cheatsheet</header>
+      <img src="https://i.imgur.com/iLhwU6d.png?1">
+			<ul>
+				<li><a href="#Emmet" class="nav-link">Emmet</a></li>
+				<li><a href="#Sass" class="nav-link">Sass</a></li>
+				<li><a href="#Grid" class="nav-link">Grid</a></li>
+				<li><a href="#Flexbox" class="nav-link">Flexbox</a></li>
+        <li><a href="#Selectors_ETC" class="nav-link">Selectors ETC</a></li>
+        <li><a href="#CSS_Animation" class="nav-link">CSS Animation</a></li>
+				<li><a href="#Sublime_Text" class="nav-link">Sublime Text</a></li>
+        <li><a href="#VScodium" class="nav-link">VScodium</a></li>
+				<li><a href="#Javascript" class="nav-link">Javascript</a></li>
+				<li><a href="#Regex" class="nav-link">Regex</a></li>
+        <li><a href="#jQuery" class="nav-link">jQuery</a></li>
+        <li><a href="#Bootstrap" class="nav-link">Bootstrap</a></li>
+        <li><a href="#React_Redux" class="nav-link">React & Redux</a></li>
+        <li><a href="#Git" class="nav-link">Git</a></li>
+        <li><a href="#Bash" class="nav-link">Bash</a></li>
+				<li><a href="#Links" class="nav-link">Links</a></li>
+			</ul>
+		</nav>
+	
+		<div id="documentation">
+			<section id="Emmet" class="main-section">
+				<header>Emmet</header>
+        <h2>Shortcuts</h2>
+				<table>
+          <caption>Usefull Emmet shrotcuts for speeding up work</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+					<thead>
+					<tr>
+						<th>Type</th>
+						<th>?</th>
+						<th>Example</th>
+						<th>Result</th>
+					</tr>
+					<tbody>
+					<tr>
+						<td>Child</td>
+						<td></td>
+						<td><code>nav&gt;ul&gt;li</code></td>
+					<td><pre><samp>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</samp></pre></td>
+					</tr>
+          <tr>
+            <td>Sibling</td>
+            <td>+</td>
+            <td><code>div+p+bq
+</code></td>
+          <td><pre><samp>&lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;</samp></pre></td>
+          </tr>
+          <tr>
+            <td>Climb-up</td>
+            <td>^</td>
+            <td><code>div+div&gt;p&gt;<wbr>span+em^bq</code></td>
+          <td><pre><samp>&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+  &lt;p&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;em&gt;&lt;/em&gt;
+  &lt;/p&gt;
+  &lt;blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/div&gt;</samp></pre></td>
+          </tr>
+          <tr>
+            <td>Grouping</td>
+            <td>( )</td>
+            <td><code>div&gt;<wbr>(header&gt;ul&gt;<wbr>li*2&gt;a)<wbr>+footer&gt;p</code></td>
+          <td><pre><samp>&lt;div&gt;
+  &lt;header&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/header&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;</samp></pre></td>
+          </tr>
+          <tr>
+            <td>Multipli<wbr>cation</td>
+            <td>*</td>
+            <td><code>ul&gt;li*5</code></td>
+          <td><pre><samp>&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</samp></pre></td>
+          </tr>
+          <tr>
+            <td>Naming and #</td>
+            <td>$ @</td>
+            <td><code>ul&gt;<wbr>li.item$@3*5</code></td>
+          <td><pre><samp>&lt;ul&gt;
+  &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;item6&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;item7&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;</samp></pre></td>
+          </tr>
+					<tr>
+            <td>ID and Classes</td>
+            <td># .</td>
+            <td><code>#header+.title</code></td>
+          <td><pre><samp>&lt;div id=&quot;header&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;title&quot;&gt;&lt;/div&gt;</samp></pre></td>
+          </tr>
+          <tr>
+            <td>Custom attributes</td>
+            <td>[ ]</td>
+            <td><code>p[a=‘value1‘ b="value2"]</code></td>
+          <td><pre><samp>&lt;p a=&quot;value1&quot; b=&quot;value2&quot;&gt;
+&lt;/p&gt;</samp></pre></td>
+          </tr>
+          <tr>
+            <td>Text</td>
+            <td>{ }</td>
+            <td><code>p>{Click }+a{here}+{!}</code></td>
+          <td><pre><samp>&lt;p&gt;Click 
+  &lt;a href=&quot;&quot;&gt;here&lt;/a&gt;!
+&lt;/p&gt;</samp></pre></td>
+          </tr>
+				</table>
+        <h2>Hints</h2>
+        <p>To display viewport meta tag in head:</p>
+        <code>meta:vp</code>
+			</section>
+			
+      <section id="Sass" class="main-section">
+				<header>Sass</header>
+        <h2>RUBY compiler is a must, before building!!!</h2>
+				<p>In Sass, variables start with a $ followed by the variable name:</p>
+				<pre><code>$headings-color: green;
+
+h1 { color: $headings-color; }</code></pre>
+				<p>Sass allows nesting of CSS rules, which is a useful way of organizing a style sheet:</p>
+				<pre><code>nav {
+  background-color: red;
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+    }
+  }
+}</code></pre>
+				<p>In Sass, a mixin is a group of CSS declarations that can be reused throughout the style sheet:</p>
+				<pre><code>@mixin box-shadow($x, $y, $blur, $c){ 
+  -webkit-box-shadow: $x, $y, $blur, $c;
+  -moz-box-shadow: $x, $y, $blur, $c;
+  -ms-box-shadow: $x, $y, $blur, $c;
+  box-shadow: $x, $y, $blur, $c;
+}
+
+div { @include box-shadow(0px, 0px, 4px, #fff); }</code></pre>
+				<p>The @if directive works just like the if statement:</p>
+				<pre><code>@mixin text-effect($val) {
+  @if $val == danger {
+    color: red;
+  }
+  @else if $val == alert {
+    color: yellow;
+  }
+  @else if $val == success {
+    color: green;
+  }
+  @else {
+    color: black;
+  }
+}
+
+div { @include text-effect(danger); }</code></pre>
+				<p>Directive @for adds styles in a loop. The "start to end" excludes the end number, and "start through end" includes the end number. 
+				The #{$i} part is the syntax to combine a variable (i) with text to make a string:</p>
+				<pre><code>@for $i from 1 through 12 {
+  .col-#{$i} { width: 100%/12 * $i; }
+}</code></pre>
+				<p>The @each directive which loops over each item in a list or map.
+				 The $key variable is needed to reference the keys in the map. Otherwise, the compiled CSS would have color1, color2... in it.</p>
+				<pre><code>$list: (color1: blue, color2: red, color3: green);
+@each $key, $color in $list {
+  .#{$color}-text {color: $color;}
+}</code></pre>
+				<p>The @while directive is an option with similar functionality to the while loop. 
+				After setting the CSS rule for width, $x is incremented by 1 to avoid an infinite loop:</p>
+				<pre><code>$x: 1;
+@while $x < 13 {
+  .col-#{$x} { width: 100%/12 * $x;}
+  $x: $x + 1;
+}</code></pre>
+				<p>Partials in Sass are separate files that hold segments of CSS code.
+				Names for partials start with the underscore (_) character. For example, if all your mixins are saved in a partial named "_mixins.scss" 
+        import looks like:</p>
+				<pre><code>// In the main.scss file
+
+@import 'mixins'</code></pre>
+				<p>Sass has a feature called extend that makes it easy to borrow the CSS rules from one element and build upon them in another:</p>
+				<pre><code>.panel{
+  background-color: red;
+  height: 70px;
+  border: 2px solid green;
+}
+
+.big-panel{
+  @extend .panel;
+  width: 150px;
+  font-size: 2em;
+}</code></pre>
+          <p>To use built-in CSS functions and SASS variables use #{...} construction:</p>
+          <code>padding-top: calc(#{$header-height}/2 - #{$header-ul-li-font-size}/2);</code>			
+			</section>
+
+			<section id="Grid" class="main-section">
+				<header>Grid</header>
+				<p>Turn any HTML element into a grid container by setting its display property to grid:</p>
+				<code>display: grid;</code>
+				<p>To add columns to the grid, use the grid-template-columns property on a grid container:</p>
+				<code>grid-template-columns: auto 50px 10% 2fr 1fr;</code>
+				<p>To adjust the rows manually, use the grid-template-rows property:</p>
+				<code>grid-template-rows: auto 50px 10% 2fr 1fr;</code>
+				<p>To add a gap between the columns, use the grid-column-gap property:</p>
+				<code>grid-column-gap: 10px;</code>
+				<p>Add a gap in between the rows of a grid using grid-row-gap:</p>
+				<code>grid-row-gap: 5px;</code>
+				<p>Shorthand property for both rows and columns is a grid-gap:</p>
+				<code>grid-gap: $grid-row-gap $grid-column-gap;</code>
+				<p>The grid-column property is for use on the grid items themselves, where the first 
+				number for start-line (starting from 1) and the second number for end line:</p>
+				<code>grid-column: 2/4;</code>
+				<p>Same for rows:</p>
+				<code>grid-row: 1/4;</code>
+				<p>To align the content's position within its cell horizontally use the justify-self property on a grid item:</p>
+				<code>justify-self: (start/center/end);</code>
+				<p>To align an item vertically:</p>
+				<code>align-self: (start/center/end);</code>
+				<p>To align items within container all at once horizontally use justify-items on your grid container:</p>
+				<code>justify-items: (start/center/end);</code>
+				<p>Same for vertical alignment:</p>
+				<code>align-items: (start/center/end);</code>
+				<p>To group cells of your grid together into an area - give the area a custom name by using grid-template-areas on the container:</p>
+				<pre><code>grid-template-areas:
+  "header header header"
+  "  .   content content"
+  "footer footer footer";</code></pre>
+				<p>You can place an item in your custom area by referencing the name you gave it:</p>
+				<code>.item1 { grid-area: header; }</code>
+				<p>You can create an area on the fly for an item without creating an areas template:</p>
+				<code>.item1 { grid-area: horizontal line start/vertical line start/horizontal line end/vertical line end; }</code>
+				<p>By using the repeat function you can specify the number of times you want your column or row to be repeated:</p>
+				<code>grid-template-rows: repeat(100, 50px);</code>
+				<code>grid-template-columns: repeat(2, 1fr 50px) 20px;</code>
+				<p>To limit the size of items when the grid container changes size (minimal and maximal):</p>
+				<code>grid-template-columns: 100px minmax(50px, 200px);</code>
+				<p>To automatically insert as many rows or columns of your desired size as possible depending on the size of the container:</p>
+				<code>grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));</code>
+				<p>To collapse empty rows or columns and stretch your items to fit the size of the container use auto-fit:</p>
+				<code>grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));</code>
+			</section>
+			
+      <section id="Flexbox" class="main-section">
+				<header>Flexbox</header>
+				<p>Place the CSS property display:flex; on an element allows you to use other flex properties:</p>
+				<code>display: flex;</code>
+        <p>To align any children of element into rows or columns add the flex-direction property to the parent item:</p>
+        <code>flex-direction: (row/row-reverse/column/column-reverse);</code>
+        <p>To wrap items use flex-wrap on the container. The break point of where the wrapping happens depends on the size of the items and the 
+        size of the container:</p>
+        <code>flex-wrap: (nowrap/wrap/wrap-reverse);</code>
+        <p>To combine flex-wrap and flex-direction use flex-flow:</p>
+        <code>flex-flow: direction wrap;</code>
+        <p>To space the flex items along the the main axis use justify-content on the <span class="important_thing">container:</span></p>
+        <code>justify-content: (flex-start/center/flex-end/space-between/space-around);</code>
+        <p>To align flex items along the cross axis within <span class="important_thing">container</span> use align-items:</p>
+        <code>align-items: (flex-start/center/flex-end/baseline/stretch);</code>
+        <p>The flex-grow property controls the size of items when the parent container expands:</p>
+        <code>flex-grow: (0/number);</code>
+        <p>When used, flex-shrink property allows an item to shrink if the flex container is too small. 
+        Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.
+        The higher the number, the more it will shrink compared to the other items in the container:</p>
+        <code>flex-shrink: (0/number);</code>
+        <p>The flex-basis property specifies the initial size of the item before CSS makes adjustments with flex-shrink or flex-grow:</p>
+        <code>flex-basis: (auto/content/size/%);</code>
+        <p>Shortcut to set several flex properties at once:</p>
+        <code>flex: grow shrink basis;</code>
+        <p>The order property is used to tell CSS the order of how flex items appear in the flex container:</p>
+        <code>order: (0/number);</code>
+        <p>The align-self property allows you to adjust each <span class="important_thing">item's</span> alignment individually, instead of setting them all at once:</p>
+        <code>align-self: (auto/flex-start/center/flex-end/baseline/stretch);</code>
+      </section>
+     
+      <section id="Selectors_ETC" class="main-section">
+        <header>Selectors ETC</header>
+        <h2>Selectors</h2>
+        <table>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Code</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>All</td>
+              <td>*</td>
+              <td>Selects all elements</td>
+            </tr>
+            <tr>
+              <td>Attribute selector</td>
+              <td>[attr=value]</td>
+              <td>[attr^=value] - starts with<br>[attr$=value] - ends with<br>[attr*=value] - occurs once+<br>[attr~=value] - 
+              whitespace-separated</td>
+            </tr>
+            <tr>
+              <td>Adjacent sibling selector</td>
+              <td>A + B</td>
+              <td>Matches sibling that immediately follows the first element, and both are children of the same parent</td>
+            </tr>
+            <tr>
+              <td>General sibling selector</td>
+              <td>A ~ B</td>
+              <td>Matches siblings that are both children of the same parent element</td>
+            </tr>
+            <tr>
+              <td>Child selector</td>
+              <td>A > B</td>
+              <td>Matches children of first element</td>
+            </tr>
+            <tr>
+              <td>Descendant selector</td>
+              <td>A B</td>
+              <td>Matches descendant of first element</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Pseudo-classes</h2>
+        <table>
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>:hover</td>
+              <td>Matches when the user interacts with an element with a pointing device.</td>
+            </tr>
+            <tr>
+              <td>:first-child</td>
+              <td>Represents the first element among a group of sibling elements.</td>
+            </tr>
+            <tr>
+              <td>:last-child</td>
+              <td>Represents the last element among a group of sibling elements.</td>
+            </tr>
+            <tr>
+              <td>:nth-child(An+B)</td>
+              <td>Matches elements based on their position in a group of siblings.</td>
+            </tr>
+            <tr>
+              <td>:not(div)</td>
+              <td>Represents elements that do not match a list of selectors.</td>
+            </tr>
+            <tr>
+              <td>:has(>img)</td>
+              <td>Represents an element if any of the selectors passed as parameters.</td>
+            </tr>
+            <tr>
+              <td>:visited</td>
+              <td>Represents links that the user has already visited.</td>
+            </tr>
+             <tr>
+              <td>:active</td>
+              <td>Represents an element (such as a button) that is being activated by the user.</td>
+            </tr>
+            <tr>
+              <td>:checked</td>
+              <td>Represents any radio or option element that is checked or toggled to an ON state.</td>
+            </tr>
+            <tr>
+              <td>:root</td>
+              <td>Matches the root element of a tree representing the document (html).</td>
+            </tr>
+            <tr>
+              <td>:target</td>
+              <td>Represents a unique element (the target element) with an id matching the URL's fragment.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Pseudo-elements</h2>
+        <table>
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Desc</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>::after</td>
+              <td>Creates a pseudo-element that is the last child of the selected element. 
+              It is often used to add cosmetic content to an element with the content property. It is inline by default.</td>
+            </tr>
+            <tr>
+              <td>::before</td>
+              <td>Creates a pseudo-element that is the first child of the selected element. 
+              It is often used to add cosmetic content to an element with the content property.</td>
+            </tr>
+            <tr>
+              <td>::first-letter</td>
+              <td>Applies styles to the first letter of the first line of a block-level element.</td>
+            </tr>
+            <tr>
+              <td>::first-line</td>
+              <td>Applies styles to the first line of a block-level element.</td>
+            </tr>
+            <tr>
+              <td>::selection</td>
+              <td>Applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the 
+              mouse across text).</td>
+            </tr>
+          </tbody>
+        </table>       
+      </section>
+      
+      <section id="CSS_Animation" class="main-section">
+        <header>CSS Animation</header>
+        <p>Coming soon</p>
+      </section>
+			
+      <section id="Sublime_Text" class="main-section">
+				<header>Sublime Text</header>
+				<h2>Shortcuts</h2>
+        <h3>General</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td>
+              <td>command prompt</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd></td>
+              <td>switch project</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>P</kbd></td>
+              <td>go to file</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>G</kbd></td>
+              <td>go to line</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>R</kbd></td>
+              <td><span class="important_thing">go to methods</span></td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></td>
+              <td>go to methods in project</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>B</kbd></td>
+              <td>toggle side bar</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>`</kbd></td>
+              <td>toggle console</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd></td>
+              <td>new window</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Editing</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>L</kbd></td>
+              <td><span class="important_thing">select line (repeating selects next lines)</span></td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>D</kbd></td>
+              <td>select word (repeat select others occurrences in context for multiple editing)</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Up</kbd> / <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Down</kbd></td>
+              <td>select column for multiple editing</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd></td>
+              <td>select content into brackets</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd></td>
+              <td>insert line before</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Enter</kbd></td>
+              <td>insert line after</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd></td>
+              <td>delete line</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>K</kbd></td>
+              <td>delete from cursor to end of line</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>Backspace</kbd></td>
+              <td>delete from cursor to start of line</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd></td>
+              <td>duplicate line(s)</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>J</kbd></td>
+              <td>join lines</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>U</kbd></td>
+              <td>upper case</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>L</kbd></td>
+              <td><span class="important_thing">lower case</span></td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>V</kbd></td>
+              <td><span class="important_thing">paste from clipboard history</span></td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>T</kbd></td>
+              <td><span class="important_thing">transpose (swap places)</span></td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>F9</kbd></td>
+              <td><span class="important_thing">sort case insensitive</span></td>
+            </tr>
+             <tr>
+              <td><kbd>F9</kbd></td>
+              <td>sort case sensitive</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>/</kbd></td>
+              <td>comment line</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>/</kbd></td>
+              <td>block comment</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Y</kbd></td>
+              <td>redo or repeat</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>C</kbd></td>
+              <td>copy</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>V</kbd></td>
+              <td>paste</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></td>
+              <td>paste and ident</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Space</kbd></td>
+              <td>autocomplete (repeat to select next suggestion)</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>M</kbd></td>
+              <td>jump to matching brackets</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>U</kbd></td>
+              <td>soft undo (movement undo)</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></td>
+              <td>soft redo (movement redo)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Code navigation</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>F12</kbd></td>
+              <td>go to definition</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>-</kbd></td>
+              <td>jump back</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd></td>
+              <td>jump forward</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>XML / HTML</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd></td>
+              <td><span class="important_thing">select content into tag</span></td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>.</kbd></td>
+              <td><span class="important_thing">close tag</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Find / Replace</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>F</kbd></td>
+              <td>find</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>I</kbd></td>
+              <td>incremental find</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>H</kbd></td>
+              <td>replace</td>
+            </tr>
+            <tr>
+              <td><kbd>F3</kbd></td>
+              <td>find next occurrence of searched word</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>F3</kbd></td>
+              <td>find next occurrence of current word</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>F3</kbd></td>
+              <td>select all occurrences of current word for multiple editing</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td>
+              <td>find in files</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Navigation</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>0</kbd></td>
+              <td>focus on sidebar</td>
+            </tr>
+            <tr>
+              <td><kbd>Esc</kbd></td>
+              <td>focus back to edit area when focus on sidebar</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Splits / Tabs</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd></td>
+              <td>single column</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>2</kbd></td>
+              <td>two columns</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd></td>
+              <td>grid (4 groups)</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+[1,2,3...]</td>
+              <td>focus group</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+[1,2,3...]</td>
+              <td>move file to group</td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd>+[1,2,3...]</td>
+              <td>select tab</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Bookmarks</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>F2</kbd></td>
+              <td>toggle bookmark</td>
+            </tr>
+            <tr>
+              <td><kbd>F2</kbd></td>
+              <td>next bookmark</td>
+            </tr>
+            <tr>
+              <td><kbd>Shift</kbd>+<kbd>F2</kbd></td>
+              <td>previous bookmark</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F2</kbd></td>
+              <td>clear bookmarks</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Marks</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>Space</kbd></td>
+              <td>set mark</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>W</kbd></td>
+              <td>delete from cursor to mark</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>A</kbd></td>
+              <td>select from cursor to mark</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd>+<kbd>K</kbd><kbd>G</kbd></td>
+              <td>clear mark</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Custom</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Shortcut</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td>
+              <td><span class="important_thing">reindent</span></td>
+            </tr>
+            <tr>
+              <td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd></td>
+              <td><span class="important_thing">autosave on/off</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>More</h3>
+        <p>Go to <code>Preferences</code> → <code>Key Bindings - Default</code> to explore all default shortcuts and read instructions 
+        for packages you installed to find out about their custom key bindings.</p>
+        <h2>Packages</h2>
+        <table class="packages_table">
+          <colgroup>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Package</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/All%20Autocomplete">All Autocomplete</a></td>
+              <td>Extend Sublime autocompletion to find matches in all open files of the current window</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/auto-save">autosave</a></td>
+              <td>Automatically saves the current file after every modification</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/AutoFileName">AutoFileName</a></td>
+              <td>Autocompletes filenames</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Autoprefixer">AutoPrefixer</a></td>
+              <td>Vendor prefixing CSS or SASS</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Babel">Babel</a></td>
+              <td>Syntax definitions for ES6 JavaScript with React JSX extensions</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Bootstrap%204%20Autocomplete">Bootstrap 4 Autocomplete</a></td>
+              <td>Bootstrap 4 snippets etc</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/BracketHighlighter">BracketHighlighter</a></td>
+              <td>Matches brackets such as: [], (), {}, "", '', tags, etc</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Color%20Highlight">Color Highlight</a></td>
+              <td>Lightweight Color Highlight colorizer</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/ColorPicker">ColorPicker</a></td>
+              <td>A multi-platform color picker plugin</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/CSS%20Extended%20Completions">CSS Extended Completions</a></td>
+              <td>CSS Completions, LESS Completions, SASS Completions</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/CSS%20Snippets">CSS Snippets</a></td>
+              <td>A set of custom CSS snippets</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Emmet">Emmet</a></td>
+              <td>Speed up code writing</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Emmet%20Css%20Snippets">Emmet CSS Snippets</a></td>
+              <td>CSS completions for Emmet</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/ESLint">ESlint</a></td>
+              <td>Lint ECMAScript/JavaScript syntax</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Gulp">Gulp</a></td>
+              <td>Gulp tasks and snippets</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/LiveReload">LiveReload</a></td>
+              <td>A web browser page reloading plugin</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/NASM%20x86%20Assembly">NASM x86 Assembly</a></td>
+              <td>Provides actually decent code highlighting for x86-64 assembly</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/One%20Dark%20Color%20Scheme">One Dark Color Scheme</a></td>
+              <td>A port of the One Dark color scheme from Github's Atom editor</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/One%20Dark%20Material%20-%20Theme">One Dark Material - Theme</a></td>
+              <td>Theme based on Atom.io One Dark UI Theme and created from Material Theme</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Package%20Control">Package Control</a></td>
+              <td>A full-featured package manager</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/Sass">Sass</a></td>
+              <td>Sass and SCSS syntax</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/SASS%20Build">SASS Build</a></td>
+              <td>SASS build sytem</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/SASS%20Snippets">SASS snippets</a></td>
+              <td>Just Sass Snippets</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/SideBarEnhancements">SideBarEnhancements</a></td>
+              <td>Enhancements to Sublime Text sidebar. Files and folders.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/SublimeCodeIntel">SublimeCodeIntel</a></td>
+              <td>Full-featured code intelligence and smart autocomplete engine</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/SublimeLinter">SublimeLinter</a></td>
+              <td>The code linting framework</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="https://packagecontrol.io/packages/SublimeOnSaveBuild">SublimeOnSaveBuild</a></td>
+              <td>Trigger a build the moment you save a file </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Hints</h2>
+        <p>Custom Build System declaration for Node.js (Tools>Build System>Build New System):</p>
+        <pre><code>{
+  "cmd": ["node", "$file"],
+  "selector": "source.js"
+}
+</code></pre>
+        <p>Custom Key bindings (Preferences>Key bindings):</p>
+        <pre><code>[
+  { "keys": ["alt+shift+f"], "command": "reindent" },
+  { "keys": ["alt+shift+o"], "command": "auto_save" },
+]
+</code></pre>
+        <p>Custom Build System for NASM:</p>
+        <pre><code>{
+"variants":
+[
+    {
+        "name": "Make plain",
+        "cmd": ["nasm", "${file}"]
+    },
+    {
+        "name": "Make .o x32",
+        "cmd": ["nasm", "-f", "win32", "${file}", "-o", "${file_base_name}.o"]
+    },
+    {
+        "name": "Make .o x64",
+        "cmd": ["nasm", "-f", "win64", "${file}", "-o", "${file_base_name}.o"]
+    },
+    {
+        "name": "Make .exe",
+        "cmd": ["ld", "${file_base_name}.o", "-o", "${file_base_name}.exe"]
+    },
+    {
+        "name": "Make .com x16",
+        "cmd": ["nasm", "-f", "bin", "${file}", "-o", "${file_base_name}.com"]
+    },
+],
+  "file_regex": "^(.+):([0-9]+)()?: error: (.*)$",
+  "working_dir": "${file_path}",
+  "selector": "source.assembly"
+}
+</code></pre>
+		  </section>
+      
+      <section id="VScodium" class="main-section">
+        <header>VScodium</header>
+        <h2>Extensions</h2>
+        <table class="packages_table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>All Autocomplete</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Auto Close Tag</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Auto Complete Tag</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Auto Rename Tag</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Beautify Code Runner</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>GitLens — Git supercharged</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Import Cost</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>JavaScript (ES6) code snippets</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>jshint</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Live Server</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Multiple clipboards for VSCode</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Path Autocomplete</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Reactjs code snippets</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Sass / Scss</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Theme - One Dark Pro</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>vscode-icons</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>ESLint</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Hints</h2>
+        <p>JShint settings.json:</p>
+        <pre><code>{
+  "workbench.iconTheme": "vscode-icons",
+  "[javascript]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "window.zoomLevel": 0,
+  "editor.minimap.enabled": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "jshint.config": "",
+  "jshint.lintHTML": true,
+  "jshint.options": {
+      "esversion": 6
+}</code></pre>
+<p>Sass build task.json:</p>
+        <pre><code>// Sass configuration
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sass Compile",
+      "type": "shell",
+      "command": "sass style.scss style.css",
+      "group": "build"
+    }
+  ]
+}</code></pre>
+      </section>
+		  
+      <section id="Javascript" class="main-section">
+        <header>Javascript</header>
+        <h2>Functions</h2>
+        <table id="JSfunctionsTable">
+          <caption>Most usefull basic functions</caption>
+          <colgroup class="colgroupInJS">
+            <col class="functionCol">
+            <col class="notesCol">
+          </colgroup>
+          <thead>
+            <th>Function, etc</th>
+            <th>Notes</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>document.write(str);</code></td>
+              <td>On screen</td>
+            </tr>
+            <tr>
+              <td><code>console.log(str);</code></td>
+              <td>In console</td>
+            </tr>
+            <tr>
+              <td><code>console.log("%S and %D", "str", 4);</code></td>
+              <td>Way to avoid \n</td>
+            </tr>
+            <tr>
+              <td><code>obj.hasOwnProperty("propname");</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>str.split("splitter str");</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>arr.join("joiner str");</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>arr.reverse();</code></td>
+              <td>[1, 2, 3] => [3, 2, 1]</td>
+            </tr>
+            <tr>
+              <td><code>arr.push(elem);</code></td>
+              <td>[ ___+]</td>
+            </tr>
+            <tr>
+              <td><code>arr.unshift(elem);</code></td>
+              <td>[+___ ]</td>
+            </tr>
+            <tr>
+              <td><code>arr.pop();</code></td>
+              <td>[ ___- ]</td>
+            </tr>
+            <tr>
+              <td><code>arr.shift();</code></td>
+              <td>[ -___ ]</td>
+            </tr>
+            <tr>
+              <td><code>arr.indexOf(elem);</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>arr.includes(what to find, start position);</code></td>
+              <td>Returns true/false</td>
+            </tr>
+            <tr>
+              <td><code>arr.find( var => var == 2);</code></td>
+              <td>Returns index</td>
+            </tr>
+            <tr>
+              <td><code>arr.slice(start № incl, end № not incl);</code></td>
+              <td>Not changes basic array</td>
+            </tr>
+            <tr>
+              <td><code>arr.splice(start № incl, hom much elems to remove not incl, what to insert);</code></td>
+              <td>Changes basic array, 0 or empty disables 2nd param, empty disables 3rd param, arr.splice(start) will delete all after index</td>
+            </tr>
+            <tr>
+              <td><code>str.charAt(position);</code></td>
+              <td>Starts from 0 like as array, returns char</td>
+            </tr>
+            <tr>
+              <td><code>str.toUpperCase();</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>str.toLowerCase();</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>arr.filter(elem => elem > 2);</code></td>
+              <td>Makes new arr with passed through elems</td>
+            </tr>
+            <tr>
+              <td><code>condition ? returned if true : returned if false</code></td>
+              <td>Ternary operator</td>
+            </tr>
+            <tr>
+              <td><code>var = age > 21</code></td>
+              <td>Var will be true/false</td>
+            </tr>
+            <tr>
+              <td><code>arr.map(elem => elem + 2);</code></td>
+              <td>Every elem will be increased by 2, creates new arr</td>
+            </tr>
+            <tr>
+              <td><code>( function( ) { /* ... */ } )( );</code></td>
+              <td><a href="https://en.wikipedia.org/wiki/Immediately_invoked_function_expression">Immediately invoked 
+              function expression/self-executing anonymous function</a></td>
+            </tr>
+            <tr>
+              <td><code>[...arr], [...arr1, ...arr2], [...arr, var]</code></td>
+              <td>Spread operator. Example: Use to copy array</td>
+            </tr>
+            <tr>
+              <td><code>array2 = array1.map( (elem) => ({"titleInNewJSON": elem["Title"], "ratingInNewJSON": elem["Rating"]}));</code></td>
+              <td>Maping elements from JSON to new smaller JSON</td>
+            </tr>
+            <tr>
+              <td><code>arr.every( (elem) => );</code></td>
+              <td>Returns true/false</td>
+            </tr>
+            <tr>
+              <td><code>arr.some( (elem) => );</code></td>
+              <td>Returns true/false</td>
+            </tr>
+            <tr>
+              <td>arguments</td>
+              <td>Object containing all arguments that were passed in function. Not an array, but almost same. Have length prop.</td>
+            </tr>
+            <tr>
+              <td><code>function.call(args);</code></td>
+              <td>Way to display arguments that have grabbed by next method</td>
+            </tr>
+            <tr>
+              <td><code>var args = Array.prototype.slice.call(arguments);</code></td>
+              <td>Way to grab arguments</td>
+            </tr>
+            <tr>
+              <td><code>str.substring(start incl, end not incl);</code></td>
+              <td>Returns part of a string</td>
+            </tr>
+            <tr>
+              <td><code>str.charCodeAt(index);</code></td>
+              <td>Returns unicode</td>
+            </tr>
+            <tr>
+              <td><code>String.fromCharCode(unicode);</code></td>
+              <td>Returns symbol</td>
+            </tr>
+            <tr>
+              <td><code>let reg = new RegExp(regStr);</code></td>
+              <td>Creating a regular expression with function</td>
+            </tr>
+            <tr>
+              <td><code>Object.assign(target, ...sources);</code></td>
+              <td>Properties in the target object will be overwritten by properties in the sources if they have the same key. 
+              Later sources' properties will overwrite earlier ones.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Objects</h2>
+        <p>Simple object creation:</p>
+        <pre><code>let myObject = {
+  prop1: "str",
+  prop2: 13,
+  prop3: function () {...}
+};</code></pre>
+        <p>Simple constructor creation:</p>
+        <pre><code>function MyConstructor () {
+  this.prop1: "str";
+  this.prop2: 13;
+  this.prop3: function () {...};
+};
+let objectExemplarName = new MyConstructor1();</code></pre>
+        <p>Constructor creation with arguments:</p>
+        <pre><code>function MyConstructor (pr1, pr2, pr3) {
+  this.prop1: pr1;
+  this.prop2: pr2;
+  this.prop3: pr3;
+};</code></pre>
+        <p>Check if object is instance of constructor:</p>
+        <code>myObject instanceof MyConstructor;</code>
+        <p>Check if object has own property:</p>
+        <code>myObject.hasOwnProperty(prop); //true/false</code>
+        <p>Check if prototype of constructor is prototype of object:</p>
+        <code>MyConstructor.prototype.isPrototypeOf(myObject);</code>
+        <p>Prototype property. Avoids extra copies of variables in every new object.:</p>
+        <code>myConstructor.prototype.prop1 = 13;</code>
+        <p>Define prototype property:</p>
+        <pre><code>MyConstructor.prototype = {
+  constructor: MyConstructor,
+  prop1: 13,
+  prop2: function () {...}
+};</code></pre>
+        <p>Inheritance:</p>
+        <code>MyConstructor.prototype = Object.create(ParentObject.prototype);</code>
+        <p>Redefinition of constructor property is mandatory:</p>
+        <code>MyConstructor.prototype.constructor = MyConstructor;</code>
+        <p>Mixins:</p>
+        <pre><code>let myMixin = function (object) {
+  object.prop1 = function () {...}
+};
+myMixin.(myObject);</code></pre>
+        <p>Closure:</p>
+        <pre><code>function MyConstructor() { 
+  let protectedProp = 13;
+  this.getProtectedProp = function () {
+    return protectedProp;
+  }
+}</code></pre>
+        <p>Modules:</p>
+        <pre><code>let myModule = (function () {
+  return {
+    firstMixin: function (obj) {...},
+    secMixin: function (obj) {...}
+  }
+})();</code></pre>
+        <p>Lists only Enumerable keys in object:</p>
+        <code>MyConstructor.keys(myObject);</code>
+        <p>Looping through keys:</p>
+        <code>for (let key in myObject) {...};</code>
+        <p>Expected output: Array ["prop1", "prop2", "prop3"]. All props:</p>
+        <code>Object.getOwnPropertyNames(myObject);</code>
+      </section>
+		  
+      <section id="Regex" class="main-section">
+				<header>Regex</header>
+				<h2>Rules</h2>
+        <table>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Rule</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>/str/i</td>
+              <td>ignore case</td>
+            </tr>
+            <tr>
+              <td>/str/g</td>
+              <td>match globally (1+)</td>
+            </tr>
+            <tr>
+              <td>/str/m</td>
+              <td>multiline</td>
+            </tr>
+            <tr>
+              <td>/str/u</td>
+              <td>UNICODE</td>
+            </tr>
+            <tr>
+              <td>/str/s</td>
+              <td> . match newlines</td>
+            </tr>
+            <tr>
+              <td>/str/y</td>
+              <td>fuzzy search</td>
+            </tr>
+            <tr>
+              <td>/str1|str2/</td>
+              <td>OR</td>
+            </tr>
+            <tr>
+              <td>regex.test(str)</td>
+              <td>True/False</td>
+            </tr>
+            <tr>
+              <td>str.match(regex)</td>
+              <td>Returns matches</td>
+            </tr>
+            <tr>
+              <td>/.uck/</td>
+              <td>Any 1 symbol</td>
+            </tr>
+            <tr>
+              <td>/[ld]uck/</td>
+              <td>Specifies letters</td>
+            </tr>
+            <tr>
+              <td>/[a-z]uck/</td>
+              <td>Range of letters</td>
+            </tr>
+            <tr>
+              <td>/[0-9]/</td>
+              <td>Range of numbers</td>
+            </tr>
+            <tr>
+              <td>/[^t]uck/</td>
+              <td>Excludes letters in []</td>
+            </tr>
+            <tr>
+              <td>/[a]+/</td>
+              <td>One or more in a row</td>
+            </tr>
+            <tr>
+              <td>/[a]*/</td>
+              <td>0 or more</td>
+            </tr>
+            <tr>
+              <td>/t[a-z]*i/</td>
+              <td>Greedy. titanic => titani</td>
+            </tr>
+            <tr>
+              <td>/t[a-z]*?i/</td>
+              <td>Lazy. titanic => ti</td>
+            </tr>
+            <tr>
+              <td>/^[range]/</td>
+              <td>Searches in the start of string</td>
+            </tr>
+            <tr>
+              <td>/[str]$/</td>
+              <td>Searches at the end of string</td>
+            </tr>
+            <tr>
+              <td>/\w/</td>
+              <td>Equal to /[A-Za-z0-9_]/</td>
+            </tr>
+            <tr>
+              <td>/\W/</td>
+              <td>Equal to /[^A-Za-z0-9_]/</td>
+            </tr>
+            <tr>
+              <td>/\d/</td>
+              <td>/[0-9]/</td>
+            </tr>
+            <tr>
+              <td>/\D/</td>
+              <td>/[^0-9]/</td>
+            </tr>
+            <tr>
+              <td>/\s/</td>
+              <td>/[\f\n\r\t\v]/</td>
+            </tr>
+            <tr>
+              <td>/\S/</td>
+              <td>/[^\f\n\r\t\v]/</td>
+            </tr>
+            <tr>
+              <td>\t</td>
+              <td>tab</td>
+            </tr>
+            <tr>
+              <td>\r</td>
+              <td>carriage return</td>
+            </tr>
+            <tr>
+              <td>\n</td>
+              <td>newline</td>
+            </tr>
+            <tr>
+              <td>\v</td>
+              <td>vertical tab</td>
+            </tr>
+            <tr>
+              <td>\f</td>
+              <td>formfeed</td>
+            </tr>
+            <tr>
+              <td>[\b]</td>
+              <td>backspace</td>
+            </tr>
+            <tr>
+              <td>a{3,5}</td>
+              <td>From 3 to 5</td>
+            </tr>
+            <tr>
+              <td>a{3,}</td>
+              <td>3 or more</td>
+            </tr>
+            <tr>
+              <td>a{3}</td>
+              <td>Exact 3</td>
+            </tr>
+            <tr>
+              <td>/colou?r/</td>
+              <td>Optional "u" 0+ times</td>
+            </tr>
+            <tr>
+              <td>/x(?=y)/</td>
+              <td>Matches if Y follows X</td>
+            </tr>
+            <tr>
+              <td>/x(?!y)</td>
+              <td>Matches if Y not follows X</td>
+            </tr>
+            <tr>
+              <td>/(?<=y)x/</td>
+              <td>Matches if Y precede X</td>
+            </tr>
+            <tr>
+              <td>/(?&lt;!y)x/</td>
+              <td>Matches if Y not precede X</td>
+            </tr>
+            <tr>
+              <td>/(?=\w{3,6})(?!\D*\d)/</td>
+              <td>Positive and negative lookaheads</td>
+            </tr>
+            <tr>
+              <td>/(\w+)\s\1/</td>
+              <td>"\1" repeats pattern within ()</td>
+            </tr>
+            <tr>
+              <td>str.replace(regex,str2)</td>
+              <td>Replace</td>
+            </tr>
+            <tr>
+              <td>"some any".replace(/(\w+)\s(\w+), "$2 $1"/)</td>
+              <td>Replace with pattern repeat</td>
+            </tr>
+            <tr>
+              <td>str.trim()</td>
+              <td>Removes spaces on the sides</td>
+            </tr>
+            <tr>
+              <td>/(?!^[\s]+)(?=[\w]*)(?![\s]+$)/</td>
+              <td>Removes spaces on the sides</td>
+            </tr>
+            <tr>
+              <td>\ [ ^ $ . | ? * + ( )</td>
+              <td>Must be escaped with \ to match literally or \\ when creating with "new RegExp(regStr);"</td>
+            </tr>
+            <tr>
+              <td>/^(1\s?)?(\(\d{3}\)[\s]?|\d{3}[\s\-]?)\d{3}[\s-]?\d{4}$/</td>
+              <td>Example: telephone validator</td>
+            </tr>
+          </tbody>
+        </table>
+			</section>
+      
+      <section id="jQuery" class="main-section">
+        <header>jQuery</header>
+        <h2>Commands</h2>
+        <table>
+          <colgroup>
+            <col class="functionCol">
+            <col class="notesCol">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$(document).ready(function() {});</td>
+              <td>Execute function after render</td>
+            </tr>
+            <tr>
+              <td>$("button").addClass("animated bounce");</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>$(".well").addClass("animated shake");</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>$("#target").removeClass("btn-default");</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>$("#target").css("color","red");</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>$("button").prop("disabled", true);</td>
+              <td>Set non-css property</td>
+            </tr>
+            <tr>
+              <td>$("h3").html("&lt;em>jQuery Playground&lt;/em>");</td>
+              <td>Add html element</td>
+            </tr>
+            <tr>
+              <td>$("h3").text("some text");</td>
+              <td>Change text</td>
+            </tr>
+            <tr>
+              <td>$("elem").remove();</td>
+              <td>Delete element</td>
+            </tr>
+            <tr>
+              <td>$("#target").appendTo("#left-well");</td>
+              <td>Move target element inside other element</td>
+            </tr>
+            <tr>
+              <td>$("#target2").clone("#right-well");</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>$("#left-well").parent().css("background-color", "blue");</td>
+              <td>Change css of target's parrent element</td>
+            </tr>
+            <tr>
+              <td>$("elem").children().css("color", "blue");</td>
+              <td>Change css of target's childreb element</td>
+            </tr>
+            <tr>
+              <td>$(".target:nth-child(3)").addClass("...");</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>$(".target:odd").addClass("...");</td>
+              <td>1 3 5...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section id="Bootstrap" class="main-section">
+        <header>Bootstrap</header>
+        <h2>Classes</h2>
+        <table>
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Classes</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>div.container</td>
+              <td>Responsive width container</td>
+            </tr>
+            <tr>
+              <td>div.container-fluid</td>
+              <td>Full width container, spanning 100% width of the viewport</td>
+            </tr>
+            <tr>
+              <td>.img-fluid</td>
+              <td>Responsive 100% width image</td>
+            </tr>
+            <tr>
+              <td>.img-thumbnail</td>
+              <td>Gives an image a rounded 1px border appearance</td>
+            </tr>
+            <tr>
+              <td>.float-left, .mx-auto .d-block, .float-right, .float-none</td>
+              <td>Aligning blocks</td>
+            </tr>
+            <tr>
+              <td>.text-left, .text-center, .text-right</td>
+              <td>Aligning text</td>
+            </tr>
+            <tr>
+              <td>.align-baseline, .align-top, .align-middle, .align-bottom, .align-text-bottom, .align-text-top</td>
+              <td>Text vertical alignment</td>
+            </tr>
+            <tr>
+              <td>.text-lowercase, .text-uppercase, .text-capitalize</td>
+              <td>Transform text</td>
+            </tr>
+            <tr>
+              <td>.font-weight-bold, .font-weight-bolder, .font-weight-normal, .font-weight-light, .font-weight-lighter, .font-italic</td>
+              <td>Font weights</td>
+            </tr>
+            <tr>
+              <td>.list-inline, .list-unstyled</td>
+              <td>List styling</td>
+            </tr>
+            <tr>
+              <td>.btn .btn-primary</td>
+              <td>Width fit content</td>
+            </tr>
+            <tr>
+              <td>.btn .btn-block</td>
+              <td>Spans whole parrent element width</td>
+            </tr>
+            <tr>
+              <td>Button types:</td>
+              <td>btn-primary, btn-secondary, btn-success, btn-danger, btn-warning, btn-info, btn-light, btn-dark, btn-link</td>
+            </tr>
+            <tr>
+              <td>.col-{breakpoint}-auto</td>
+              <td>Size columns based on the natural width of their content</td>
+            </tr>
+            <tr>
+              <td>div.row>(div.col-xs-4>button)*3</td>
+              <td>Emmet-style example</td>
+            </tr>
+            <tr>
+              <td>i.fa fa-info-circle</td>
+              <td>Font-awesome styling</td>
+            </tr>
+            <tr>
+              <td>.shadow-none .shadow-sm, .shadow, .shadow-lg</td>
+              <td>Shadows</td>
+            </tr>
+            <tr>
+              <td>{parrent container}.clearfix</td>
+              <td>Way for an element to automatically clear its child elements, so that you don't need to add additional markup. 
+              It's generally used in float layouts where elements are floated to be stacked horizontally.</td>
+            </tr>
+            <tr>
+              <td>.d-inline, .d-block, .d-none, .d-flex, .d-inline-flex</td>
+              <td>Display</td>
+            </tr>
+            <tr>
+              <td>.w-25, .w-50, .w-75, .w-100</td>
+              <td>Width</td>
+            </tr>
+            <tr>
+              <td>.h-25, .h-50, .h-75, .h-100</td>
+              <td>Height</td>
+            </tr>
+            <tr>
+              <td>.mw-25, .mw-50, .mw-75, .mw-100</td>
+              <td>Max-width</td>
+            </tr>
+            <tr>
+              <td>.mh-25, .mh-50, .mh-75, .mh-100</td>
+              <td>Max-height</td>
+            </tr>
+            <tr>
+              <td>{property}{sides}-{size}</td>
+              <td>{property}: m - margin, p - padding; 
+              {sides}: t - top, b - bottom, l - left, r - right, x - both left and right, y - both top and bottom; 
+              {size}: 1,2,3,4,5,auto</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Grid sizes</h2>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="text-center">
+                Extra small<br>
+                <small>&lt;576px</small>
+              </th>
+              <th class="text-center">
+                Small<br>
+                <small>≥576px</small>
+              </th>
+              <th class="text-center">
+                Medium<br>
+                <small>≥768px</small>
+              </th>
+              <th class="text-center">
+                Large<br>
+                <small>≥992px</small>
+              </th>
+              <th class="text-center">
+                Extra large<br>
+                <small>≥1200px</small>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="text-nowrap" scope="row">Max container width</th>
+              <td>None (auto)</td>
+              <td>540px</td>
+              <td>720px</td>
+              <td>960px</td>
+              <td>1140px</td>
+            </tr>
+            <tr>
+              <th class="text-nowrap" scope="row">Class prefix</th>
+              <td><code>.col-</code></td>
+              <td><code>.col-sm-</code></td>
+              <td><code>.col-md-</code></td>
+              <td><code>.col-lg-</code></td>
+              <td><code>.col-xl-</code></td>
+            </tr>
+            <tr>
+              <th class="text-nowrap" scope="row"># of columns</th>
+              <td colspan="5">12</td>
+            </tr>
+            <tr>
+              <th class="text-nowrap" scope="row">Gutter width</th>
+              <td colspan="5">30px (15px on each side of a column)</td>
+            </tr>
+            <tr>
+              <th class="text-nowrap" scope="row">Nestable</th>
+              <td colspan="5">Yes</td>
+            </tr>
+            <tr>
+              <th class="text-nowrap" scope="row">Column ordering</th>
+              <td colspan="5">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Mobile first</h2>
+        <pre><code>@media all and (min-width: 320px) {  }
+
+@media all and (min-width: 480px) {  }
+
+<span class="codeComment">/*Small devices (landscape phones, 576px and up)*/</span>
+@media all and (min-width: 576px) {  }
+
+<span class="codeComment">/*Medium devices (tablets, 768px and up)*/</span>
+@media all and (min-width: 768px) {  }
+
+<span class="codeComment">/*Large devices (desktops, 992px and up)*/</span>
+@media all and (min-width: 992px) {  }
+
+<span class="codeComment">/*Extra large devices (large desktops, 1200px and up)*/</span>
+@media all and (min-width: 1200px) {  }
+</code></pre>
+        <h2>Desktop first</h2>
+        <pre><code><span class="codeComment">/*Extra large devices (large desktops, 1200px and up)*/</span>
+@media all and (max-width: 1200px) {  }
+
+<span class="codeComment">/*Large devices (desktops, 992px and up)*/</span>
+@media all and (max-width: 992px) {  }
+
+<span class="codeComment">/*Medium devices (tablets, 768px and up)*/</span>
+@media all and (max-width: 768px) {  }
+
+<span class="codeComment">/*Small devices (landscape phones, 576px and up)*/</span>
+@media all and (max-width: 576px) {  }
+
+@media all and (max-width: 480px) {  }
+
+@media all and (max-width: 320px) {  }</code></pre>
+      </section>
+      
+      <section id="React_Redux" class="main-section">
+        <header>React & Redux</header>
+        <h2>React</h2>
+        <p>Simple empty statefull component:</p>
+        <pre><code>class MyExampleComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return ();
+  }
+};</code></pre>
+        <p>Filled component with comments:</p>
+        <pre><code>class FilledComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    <span class="codeComment">//State are defined here:</span>
+    this.state = {
+      input: '',
+      messages: [] 
+    }
+    <span class="codeComment">//All methods must be bound explicitly to the component:</span>
+    this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
+  }
+  <span class="codeComment">//Methods are defined here:</span>
+  handleChange(event) {
+  <span class="codeComment">//Dont change state directly. Use setState method:</span>
+    this.setState({
+      <span class="codeComment">//Access to event value:</span>
+      input: event.target.value
+    });
+  }
+  submitMessage() {
+    const currentMessage = this.state.input;
+    this.setState({
+      input: '',
+      messages: [...this.state.messages, currentMessage]
+    });
+  }
+  render() {
+    <span class="codeComment">//Write JS code here before return without brackets "{}"</span>
+    return (
+      &lt;div>
+        &lt;h2>Type in a new Message:&lt;/h2>
+        &lt;input
+          value={this.state.input}
+          onChange={this.handleChange}/>&lt;br/>
+        &lt;button onClick={this.submitMessage}>Submit&lt;/button>
+        &lt;ul>
+          <span class="codeComment">//Render elements depending on array values amount</span>
+          {this.state.messages.map( (message, idx) => { 
+              return (
+                <span class="codeComment">//Dont forget to set key property</span>
+                &lt;li key={idx}>{message}&lt;/li> 
+              )
+            })
+          }
+        &lt;/ul>
+      &lt;/div>
+    );
+  }
+};</code></pre>
+         <p>React without JSX:</p>
+        <pre><code>class Hello extends React.Component {
+  render() {
+    return &lt;div>Привет, {this.props.toWhat}&lt;/div>;
+  }
+}
+
+ReactDOM.render(
+  &lt;Hello toWhat="мир" />, 
+  document.getElementById('root')
+);</code></pre>
+        <p>Importing so no need to type React.Component:</p>
+        <code>import React, {Component} from 'react';</code>
+        <p>Modern class initialization. Constructor  Is still need if you need to modify state with props:</p>
+        <pre><code>class ModernClass extends Compoment {
+  state = {
+    counter: 0
+  }
+  //No need to .bind(this)
+  handleClick = () => {...};
+}</code></pre>
+        <p>Lifecycle methods:</p>
+        <pre><code></code></pre>
+        <h2>Redux</h2>
+        <pre><code></code></pre>
+        <h2>React & Redux</h2>
+        <pre><code></code></pre>
+      </section>
+			
+      <section id="Git" class="main-section">
+				<header>Git</header>
+				<table>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="2">Setup config</th>
+            </tr>
+            <tr>
+              <td>git config --global user.name "username"</td>
+              <td>set username</td>
+            </tr>
+            <tr>
+              <td>git config --global user.email "example@mail.com"</td>
+              <td>set email</td>
+            </tr>
+            <tr>
+              <td>git config --global alias.hist "log --pretty=format:'%h %ad | [%an] %s%d' --graph --date=short"</td>
+              <td>set hist alias</td>
+            </tr>
+            <tr>
+              <td>git config --list</td>
+              <td>discover all current settings</td>
+            </tr>
+            <tr>
+              <td>git help &lt;command> </td>
+              <td>discover command description</td>
+            </tr>
+            <tr>
+              <th colspan="2">Bash Aliases</th>
+            </tr>
+            <tr>
+              <td colspan="2">
+                # Set as alias in bash or terminal emulator: <br>
+                alias gs=git status<br>
+                alias ga=git add<br>
+                alias gb=git branch<br>
+                alias gc=git commit<br>
+                alias gd=git diff<br>
+                alias gco=git checkout<br>
+                alias gk=gitk --all&<br>
+                alias gx=gitx --all<br>
+                alias got=git <br>
+                alias get=git <br>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2">Initialize repo</th>
+            </tr>
+            <tr>
+              <td>git init</td>
+              <td>initialization of repo</td>
+            </tr>
+            <tr>
+              <td>git status</td>
+              <td>discover which branch are you currently on and which files are tracked</td>
+            </tr>
+            <tr>
+              <th colspan="2">Add files to track changes</th>
+            </tr>
+            <tr>
+              <td>git add .</td>
+              <td>add all files to a tracking</td>
+            </tr>
+            <tr>
+              <td>git add &lt;filename.xtnsn></td>
+              <td>add single file to a tracking</td>
+            </tr>
+            <tr>
+              <td>git rm -r --cached  &lt;filename.xtnsn></td>
+              <td>unstage file from tracking (will not delete file from repo)</td>
+            </tr>
+            <tr>
+              <th colspan="2">Commit</th>
+            </tr>
+            <tr>
+              <td>git commit -m "message"</td>
+              <td>commit all currently tracking files with message/comment (-m)</td>
+            </tr>
+            <tr>
+              <td>git commit --amend -m "new message"</td>
+              <td>change commit message or/and commited files</td>
+            </tr>
+            <tr>
+              <td>git reset</td>
+              <td>cancel indexing, remove from added files</td>
+            </tr>
+            <tr>
+              <th colspan="2">Remote repo</th>
+            </tr>
+            <tr>
+              <td>git remote add %shortLocalRepoName %remoteRepoNameOrURL</td>
+              <td>add remote repo</td>
+            </tr>
+            <tr>
+              <td>git push -u %shortLocalRepoName master</td>
+              <td>push all changes to remote repo to master branch</td>
+            </>
+            <tr>
+              <td>git clone %whatToClone %inWhatToClone</td>
+              <td>clone remote repo</td>
+            </tr>
+            <tr>
+              <td>git clone "https://github.com/username/reponame"</td>
+              <td>clone remote repo in current directory</td>
+            </tr>
+            <tr>
+              <td>git clone --bare hello hello.git</td>
+              <td>clone just history, without files</td>
+            </tr>
+            <tr>
+              <td>git remote show %name</td>
+              <td>shows information about certain repo</td>
+            </tr>
+            <tr>
+              <td>cd ../cloned_repo; git fetch</td>
+              <td>fetch remote repo changes without merging with local clone changes</td>
+            </tr>
+            <tr>
+              <td>git merge %branchNameWithWhichToMerge</td>
+              <td>merge local and remote changes (being in local clone directory)(origin/master - remote with which branch to merge)</td>
+            </tr>
+            <tr>
+              <td>git pull</td>
+              <td> = git fetch %remoteName; git checkout %remoteName/master; git checkout -b %localName/master; ga .; gc; git checkout master; git merge %localName/localBranch</td>
+            </tr>
+            <tr>
+              <td>git push %remoteRepoName %remoteBranchName</td>
+              <td>push changes to remote repo from local</td>
+            </tr>
+            <tr>
+              <th colspan="2">Branches</th>
+            </tr>
+            <tr>
+              <td>git branch</td>
+              <td>show branches</td>
+            </tr>
+            <tr>
+              <td>git branch -a</td>
+              <td>show branches (all) including remote</td>
+            </tr>
+            <tr>
+              <td>git branch --track %localBranchName %remoteBranchName</td>
+              <td>adding remote branch track to local branch to track changes in remote</td>
+            </tr>
+            <tr>
+              <td>git checkout %branchName</td>
+              <td>switch to %branchName</td>
+            </tr>
+            <tr>
+              <td>git checkout -b %branchName</td>
+              <td>create new branch and switch to it (equals: git checkout %branch; git branch %branch)</td>
+            </tr>
+            <tr>
+              <td>git switch -c %newBranchName</td>
+              <td>switch to created new branch</td>
+            </tr>
+            <tr>
+              <th colspan="2">Fetch changes for shared repo</th>
+            </tr>
+            <tr>
+              <td>git remote add %sharedRepoName ../hello.git</td>
+              <td>1. Name and add shared repo for everyone</td>
+            </tr>
+             <tr>
+              <td>git branch --track %sharedRepoName %sharedRepoBranchName</td>
+              <td>2. Track branch</td>
+            </tr>
+             <tr>
+              <td>git pull %sharedRepoName %sharedRepoBranchName</td>
+              <td>3. Fetch and merge</td>
+            </tr>
+            <tr>
+              <th colspan="2">Git server</th>
+            </tr>
+            <tr>
+              <td>git daemon --verbose --export-all --base-path=.</td>
+              <td>create git server</td>
+            </tr>
+             <tr>
+              <td>git clone git://localhost/repoName.git network-name</td>
+              <td>clone from local repo server</td>
+            </tr>
+             <tr>
+              <td>git daemon ~~~ --enable=receive-pack</td>
+              <td>enable pushing to server (dangerous)</td>
+            </tr>
+            <tr>
+              <th colspan="2">Loging/History</th>
+            </>
+            <tr>
+              <td>git log</td>
+              <td>shows commits history</td>
+            </tr>
+            <tr>
+              <td>git log --all --pretty=format:"%h %cd %s (%an)" --since="7 days ago" --author=Username</td>
+              <td>display in pretty format, commits of autors since 7 days</td>
+            </tr>
+            <tr>
+              <td>git log --pretty=format:'%h %ad | [%an] %s%d' --graph --date=short</td>
+              <td>display pretty as graph</td>
+            </tr>
+            <tr>
+              <td>git log --pretty=format:'%h'</td>
+              <td>short hash</td>
+            </tr>
+            <tr>
+              <td>git log --pretty=format:'%d'</td>
+              <td>branch HEADs or tags</td>
+            </tr>
+            <tr>
+              <td>git log --pretty=format:'%cd'</td>
+              <td>commiter date</td>
+            </tr>
+            <tr>
+              <td>git log --pretty=format:'%ad'</td>
+              <td>author date</td>
+            </tr>
+            <tr>
+              <td>git log --pretty=format:'%s'</td>
+              <td>comment/message</td>
+            </tr>
+            <tr>
+              <td>git log --pretty=format:'%an'</td>
+              <td>author</td>
+            </tr>
+            <tr>
+              <td>git log --graph</td>
+              <td>list as ASCII graph</td>
+            </tr>
+            <tr>
+              <td>git log --date=short</td>
+              <td>short date</td>
+            </tr>
+            <tr>
+              <td>git hist</td>
+              <td>explore history and hash (must be set alias for hist)</td>
+            </tr>
+            <tr>
+              <td>git reflog</td>
+              <td>lists all operations with repo</td>
+            </tr>
+            <tr>
+              <td>git checkout %hash</td>
+              <td>move HEAD (or arrow) to previous commit (using hash)</td>
+            </tr>
+            <tr>
+              <th colspan="2">Tags</th>
+            </tr>
+            <tr>
+              <td>git tag %tagName</td>
+              <td>create tag called %tagName</td>
+            </tr>
+            <tr>
+              <td>git checkout %tagName~1</td>
+              <td>switch to previous history point relatively to tag by one</td>
+            </tr>
+            <tr>
+              <td>git tag</td>
+              <td>show all tags</td>
+            </tr>
+            <tr>
+              <td>git tag -d %tagname</td>
+              <td>deletes tags (and commits if they are deleted)</td>
+            </tr>
+            <tr>
+              <td>git hist %branchName --all</td>
+              <td>shows certain tags in branch for every certain commit</td>
+            </tr>
+            <tr>
+              <th colspan="2">Cancel changes before commit</th>
+            </tr>
+            <tr>
+              <td>git reset HEAD %filenameS</td>
+              <td>resets changes in buffer zone (files won't change ar this point)</td>
+            </tr>
+            <tr>
+              <td>git checkout %filenameS</td>
+              <td>cancel changes in certain file(s)</td>
+            </tr>
+            <tr>
+              <th colspan="2">Cancel changes after commit (saved in history)</th>
+            </tr>
+            <tr>
+              <td>git revert HEAD (--no-edit)</td>
+              <td>will be saved in history</td>
+            </tr>
+            <tr>
+              <th colspan="2">Cancel changes after commit (won't be saved in history)</th>
+            </tr>
+            <tr>
+              <td>git reset --hard %hashOrTag</td>
+              <td>HARD reset to certain history condition</td>
+            </tr>
+            <tr>
+              <th colspan="2">Merge, rebase, move</th>
+            </tr>
+            <tr>
+              <td>git mv %filenameS %dirName</td>
+              <td>proper way to move files via git inside repo</td>
+            </tr>
+            <tr>
+              <td>git checkout %mainBranch; git merge %branchAddedToMain</td>
+              <td>merge branches</td>
+            </tr>
+            <tr>
+              <td>git reset --hard %hashOfMainBranchBeforeMerge; git rebase %mainBranch %branch2%</td>
+              <td>alternative to merge, without history of branches</td>
+            </tr> 
+          </tbody>
+        </table>
+			</section>
+
+      <section id="Bash" class="main-section">
+        <header>Bash</header>
+        <p>Coming soon</p>
+        <table>
+          <thead>
+            <th>Command</th>
+            <th>Description</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>rm -r dirName</td>
+              <td>delete directory</td>
+            </tr>
+            <tr>
+              <td>mv fileOrName toWhereMove</td>
+              <td>move file or directory</td>
+            </tr>
+            <tr>
+              <td>vim</td>
+              <td>cli text editor (shift then q to quit)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+			
+      <section id="Links" class="main-section">
+				<header>Links</header>
+				<ul>
+					<li><a href="https://validator.w3.org/">W3C validator</a></li>
+          <li><a href="https://www.w3.org/html/">W3C HTML specs</a></li>
+          <li><a href="https://www.w3.org/CSS/">W3C CSS specs</a></li>
+					<li><a href="https://developer.mozilla.org/">DevDocs by Mozilla</a></li>
+					<li><a href="https://www.w3schools.com/">W3schools</a></li>
+					<li><a href="https://www.freecodecamp.org/">FreeCodeCamp.org</a></li>
+          <li><a href="https://www.sublimetext.com/3">Sublime Text 3</a></li>
+          <li><a href="https://packagecontrol.io/">Sublime Text Packages</a></li>
+          <li><a href="https://github.com/VSCodium/vscodium/releases">VScodium</a></li>
+          <li><a href="https://open-vsx.org/">VScodium extensions</a></li>
+          <li><a href="https://code.visualstudio.com/">VScode</a></li>
+          <li><a href="https://marketplace.visualstudio.com/VSCode">VScode extensions</a></li>
+          <li><a href="https://conemu.github.io/">ConEmu</a></li>
+          <li><a href="http://mridgers.github.io/clink/">clink</a></li>
+          <li><a href="https://curl.haxx.se/">Curl</a></li>
+          <li><a href="https://nodejs.org/en/">Node.js</a></li>
+          <li><a href="https://www.python.org/downloads/">Python</a></li>
+          <li><a href="https://www.ruby-lang.org/ru/downloads/">Ruby</a></li>
+          <li><a href="http://livereload.com/">LiveReload</a></li>
+          <li><a href="https://desktop.github.com/">Desktop Github</a></li>
+          <li><a href="https://git-scm.com/download/">Git</a></li>
+          <li><a href="https://githowto.com/">Git How to</a></li>
+          <li><a href="https://www.sublimemerge.com/">Sublime Merge</a></li>
+          <li><a href="https://miktex.org/">MiKTeX</a></li>
+          <li><a href="https://www.xm1math.net/texmaker/">TEXmaker</a></li>
+          <li><a href="https://fontawesome.com/start">FontAwesome</a></li>
+          <li><a href="https://daneden.github.io/animate.css/">Animate.css</a></li>
+          <li><a href="https://www.nasm.us/">NASM</a></li>
+          <li><a href="http://www.ollydbg.de/">Olydbg</a></li>
+          <li><a href="https://slack.com/">Slack</a></li>
+          <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+          <li><a href="https://regex101.com/">Regex101</a></li>
+          <li><a href="https://www.freeformatter.com">FreeFormatter</a></li>
+          <li><a href="http://jsben.ch/">JSbench</a></li>
+          <li><a href="https://daringfireball.net/projects/markdown/dingus/">Markdown (.md)</a></li>
+          <li><a href="https://github.com/adam-p/markdown-here/wiki">Markdown Cheatsheet</a></li>
+          <li><a href="https://javascript.info/">Javascript.info</a></li>
+          <li><a href="https://javascript.info/">jQuery</a></li>
+          <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+          <li><a href="https://reactjs.org/">React</a></li>
+          <li><a href="https://redux.js.org/">Redux</a></li>
+          <li><a href="https://webpack.js.org/">Webpack</a></li>
+          <li><a href="https://babeljs.io/">Babel</a></li>
+          <li><a href="https://wordpress.org">Wordpress</a></li>
+          <li><a href="https://www.djangoproject.com/">Django</a></li>
+          <li><a href="https://ospanel.io/">Open Server</a></li>
+          <li><a href="https://strapi.io/">Strapi</a></li>
+				</ul>
+			</section>
+		</div>
+		
+		
+	</main>
+
+</body>
+</html>
+
+<!-- 
+		nav#navbar>header{Documentation}+ul>(li>a.nav-link[href="#Header-text$"]{Header-text$})*5
+		section#Header-text$.main-section*5>header{Header-text$}+p{Some text $}*2+code{Some code}+(ul>li{Some list $}*2)
+ -->
+
+<!-- 
+  table>caption{Caption text}+(colgroup>col*4)+(thead>tr>th*4)+(tbody>tr>td*4)+(tfoot>tr>td*4)
+-->
+
+<!-- (tr>td{$}+td*3)*31 -->
+
+<!-- (tr>td{$@32}+td*2)*3 -->
+
+<!-- (tr>td*2)*15 -->
+
+<!-- ol>(li>a)*20 -->
+
+<!-- (tr>(td+(td>a)+td))*10 -->
