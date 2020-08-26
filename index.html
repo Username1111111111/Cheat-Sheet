@@ -1178,8 +1178,12 @@ div { @include text-effect(danger); }</code></pre>
     {
       "label": "Sass Compile",
       "type": "shell",
-      "command": "sass style.scss style.css",
-      "group": "build"
+      "command": "rm style.css && sass style.scss style.css",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
     }
   ]
 }</code></pre>
@@ -1347,6 +1351,7 @@ div { @include text-effect(danger); }</code></pre>
             </tr>
           </tbody>
         </table>
+        
         <h2>Objects</h2>
         <p>Simple object creation:</p>
         <pre><code>let myObject = {
@@ -1410,6 +1415,160 @@ myMixin.(myObject);</code></pre>
         <code>for (let key in myObject) {...};</code>
         <p>Expected output: Array ["prop1", "prop2", "prop3"]. All props:</p>
         <code>Object.getOwnPropertyNames(myObject);</code>
+        
+        <h2>DOM parsing</h2>
+        <table>
+          <caption>Parsing elements</caption>
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>document.getElementByTagName();</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>document.getElementByClassName();</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>document.getElementById();</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>document.querySelector();</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>document.querySelectorAll();</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>document.querySelector("[attribute^='attrValue']");</td>
+              <td>will match all attributes STARTING with attrValue</td>
+            </tr>
+            <tr>
+              <td>document.querySelector("[attribute$='attrValue']");</td>
+              <td>will match all attributes ENDING with attrValue</td>
+            </tr>
+            <tr>
+              <td>document.querySelector("[attribute*='attrValue']");</td>
+              <td>will match all attributes CONTAINING attrValue</td>
+            </tr>
+            <tr>
+              <td>document.querySelector("[attribute^='attrValue']:not([attribute$='notWantedValue'])");</td>
+              <td>combining</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>DOM manipulation</h2>
+        <table>
+          <caption>Operations with elements</caption>
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>let newElem = document.createElement('tagName');</td>
+              <td><a href="https://developer.mozilla.org/ru/docs/DOM/document.createElement">link</a></td>
+            </tr>
+            <tr>
+              <td>parentElement.insertBefore(newElement, beforeWhichElement);</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>element.classList.add('class1 class2 classEtc');</td>
+              <td><a href="https://developer.mozilla.org/ru/docs/Web/API/DOMTokenList">Methods of classList</a></td>
+            </tr>
+            <tr>
+              <td>element.classList.remove('className');</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>element.style.attributeName = attrValue;</td>
+              <td><a href="https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/style">link</a></td>
+            </tr>
+            <tr>
+              <td>element.innerHTML = '&lt;p&gt;Hello World!&lt;/p&gt;';</td>
+              <td>...or just text</td>
+            </tr>
+            <tr>
+              <td>parentElement.appendChild(newElement);</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>parentElement.append(newElement);</td>
+              <td>Experimental</td>
+            </tr>
+            <tr>
+              <td>document.element.remove();</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>parentElement.appendChild(newElement);</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2>DOM <a href="https://developer.mozilla.org/ru/docs/Web/API/EventTarget">events</a></h2>
+        <table>
+          <caption>Operations with elements</caption>
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>target.addEventListener(type, listener[, options]);</td>
+              <td><a href="https://developer.mozilla.org/ru/docs/Web/API/EventTarget/addEventListener">link</a></td>
+            </tr>
+            <tr>
+              <td>target.removeEventListener(type, listener[, options]);</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>document.addEventListener('DOMContentLoaded', (event) => {});</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Other</h2>
+        <p>Smart interval that awaits function finishing:</p>
+        <pre><code>let timerId = setTimeout(function funcName() {
+  console.log("action");
+  setTimeout(funcName, 2000);
+});</code></pre>
+        <p></p>
+        <pre><code></code></pre>
+        <p></p>
+        <pre><code></code></pre>
+        <p></p>
+        <pre><code></code></pre>
+        <p></p>
+        <pre><code></code></pre>
       </section>
 		  
       <section id="Regex" class="main-section">

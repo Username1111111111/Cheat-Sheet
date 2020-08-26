@@ -7,7 +7,19 @@
 body {
   background-color: grey; }
 
-li, p, a, h1, h2, h3, h4, h5, h6, header, td, th, caption {
+li,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+td,
+th,
+caption {
   font-family: sans-serif; }
 
 h1 {
@@ -15,6 +27,10 @@ h1 {
 
 h2 {
   font-size: 22px; }
+  h2 a {
+    text-decoration: none;
+    color: green;
+    font-size: 22px; }
 
 h3 {
   font-size: 19px; }
@@ -111,11 +127,13 @@ kbd {
       text-align: center;
       padding-bottom: 10px;
       font-weight: bold; }
-    #documentation section h2, #documentation section h3 {
+    #documentation section h2,
+    #documentation section h3 {
       text-align: center;
       padding-bottom: 10px;
       padding-top: 10px; }
-    #documentation section code, #documentation section samp {
+    #documentation section code,
+    #documentation section samp {
       text-align: left;
       background-color: #282c34;
       border-radius: 5px;
@@ -156,7 +174,8 @@ kbd {
         width: 1fr; }
       #documentation section table colgroup col:nth-child(4) {
         width: fit-content; }
-      #documentation section table td, #documentation section table th {
+      #documentation section table td,
+      #documentation section table th {
         text-align: center;
         width: fit-content;
         min-width: 20px;
@@ -165,7 +184,8 @@ kbd {
         border-collapse: collapse;
         background-color: white;
         overflow: hidden; }
-        #documentation section table td a, #documentation section table th a {
+        #documentation section table td a,
+        #documentation section table th a {
           color: green; }
   #documentation #Emmet table td:last-child {
     text-align: left; }
@@ -219,8 +239,8 @@ kbd {
       width: fit-content; }
     #documentation #Javascript #JSfunctionsTable .colgroupInJS .notesCol {
       width: 35%; }
-    #documentation #Javascript #JSfunctionsTable tr td:nth-child(1) {
-      text-align: left; }
+  #documentation #Javascript tr td:nth-child(1) {
+    text-align: left; }
   #documentation #Regex table colgroup col:nth-child(1) {
     max-width: 400px; }
   #documentation #Regex table tr td:nth-child(1) {
@@ -259,7 +279,8 @@ kbd {
     #main-doc table {
       margin: 0 auto;
       width: 100%; }
-      #main-doc table tr td, #main-doc table tr th {
+      #main-doc table tr td,
+      #main-doc table tr th {
         padding: 0;
         min-width: 0;
         width: fit-content; }
@@ -306,7 +327,8 @@ kbd {
     width: 100%; }
     #documentation table tr {
       min-width: 0; }
-      #documentation table tr td, #documentation table tr th {
+      #documentation table tr td,
+      #documentation table tr th {
         padding: 0;
         padding-left: 1px;
         padding-right: 1px;

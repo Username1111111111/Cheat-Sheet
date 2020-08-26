@@ -7,8 +7,12 @@
       {
         "label": "Sass Compile",
         "type": "shell",
-        "command": "sass style.scss style.css",
-        "group": "build"
+        "command": "rm style.css && sass style.scss style.css",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": []
       }
     ]
   }
