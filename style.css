@@ -28,12 +28,18 @@ h1 {
 h2 {
   font-size: 22px; }
   h2 a {
-    text-decoration: none;
-    color: green;
     font-size: 22px; }
 
 h3 {
   font-size: 19px; }
+
+a {
+  text-decoration: none;
+  color: green; }
+
+table tr td[colspan="2"] {
+  text-align: center;
+  font-weight: bold; }
 
 kbd {
   display: inline-block;
@@ -154,7 +160,9 @@ kbd {
       margin: 0 auto;
       align-self: start;
       padding-top: 10px;
-      list-style-type: none; }
+      padding-bottom: 10px;
+      list-style-type: none;
+      text-align: left; }
       #documentation section ul li {
         text-align: left; }
         #documentation section ul li a {
@@ -233,13 +241,18 @@ kbd {
     #documentation #VScodium table.packages_table tr td:first-child::before {
       counter-increment: tableRow;
       content: counter(tableRow); }
+  #documentation #Javascript ul, #documentation #Javascript ol {
+    margin: 0;
+    padding-left: 1%;
+    padding-top: 10px;
+    padding-bottom: 10px; }
   #documentation #Javascript #JSfunctionsTable {
     width: 95%; }
     #documentation #Javascript #JSfunctionsTable .colgroupInJS .functionCol {
       width: fit-content; }
     #documentation #Javascript #JSfunctionsTable .colgroupInJS .notesCol {
       width: 35%; }
-  #documentation #Javascript tr td:nth-child(1) {
+  #documentation #Javascript tr td:nth-child(1):not([colspan="2"]) {
     text-align: left; }
   #documentation #Regex table colgroup col:nth-child(1) {
     max-width: 400px; }
@@ -250,6 +263,8 @@ kbd {
     padding-left: 10px; }
   #documentation #Git table tr td:nth-child(1) {
     text-align: left; }
+  #documentation #Git table tr td[colspan="2"] {
+    font-weight: normal; }
   #documentation #jQuery table tr td:nth-child(1) {
     text-align: left;
     color: green;

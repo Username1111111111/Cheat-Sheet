@@ -16,8 +16,8 @@
 		
 		<nav id="navbar">
       <header>Personal Cheatsheet</header>
-      <img src="https://i.imgur.com/iLhwU6d.png?1">
-			<ul>
+      <img src="https://i.imgur.com/iLhwU6d.png">
+    	<ul>
 				<li><a href="#Emmet" class="nav-link">Emmet</a></li>
 				<li><a href="#Sass" class="nav-link">Sass</a></li>
 				<li><a href="#Grid" class="nav-link">Grid</a></li>
@@ -1204,32 +1204,32 @@ div { @include text-effect(danger); }</code></pre>
           </thead>
           <tbody>
             <tr>
+              <td><code>"use strict"</code></td>
+              <td>Follows actual ES standart, helps to write cleaner code, preventing from using undeclared variables etc.</td>
+            </tr>
+            <tr>
               <td><code>document.write(str);</code></td>
-              <td>On screen</td>
+              <td>Straight to layout</td>
             </tr>
             <tr>
               <td><code>console.log(str);</code></td>
               <td>In console</td>
             </tr>
             <tr>
+              <td><code>alert("message");</code></td>
+              <td>In window</td>
+            </tr>
+            <tr>
+              <td><code>confirm("question");</code></td>
+              <td>In window</td>
+            </tr>
+            <tr>
+              <td><code>prompt("question", "default answer");</code></td>
+              <td>In window</td>
+            </tr>
+            <tr>
               <td><code>console.log("%S and %D", "str", 4);</code></td>
               <td>Way to avoid \n</td>
-            </tr>
-            <tr>
-              <td><code>obj.hasOwnProperty("propname");</code></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><code>str.split("splitter str");</code></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><code>arr.join("joiner str");</code></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><code>arr.reverse();</code></td>
-              <td>[1, 2, 3] => [3, 2, 1]</td>
             </tr>
             <tr>
               <td><code>arr.push(elem);</code></td>
@@ -1248,16 +1248,28 @@ div { @include text-effect(danger); }</code></pre>
               <td>[ -___ ]</td>
             </tr>
             <tr>
+              <td><code>arr.reverse();</code></td>
+              <td>[1, 2, 3] => [3, 2, 1]</td>
+            </tr>
+            <tr>
               <td><code>arr.indexOf(elem);</code></td>
               <td></td>
+            </tr>
+            <tr>
+              <td><code>arr.find( var => var == 2);</code></td>
+              <td>Returns index</td>
             </tr>
             <tr>
               <td><code>arr.includes(what to find, start position);</code></td>
               <td>Returns true/false</td>
             </tr>
             <tr>
-              <td><code>arr.find( var => var == 2);</code></td>
-              <td>Returns index</td>
+              <td><code>arr.every( (elem) => );</code></td>
+              <td>Returns true/false</td>
+            </tr>
+            <tr>
+              <td><code>arr.some( (elem) => );</code></td>
+              <td>Returns true/false</td>
             </tr>
             <tr>
               <td><code>arr.slice(start № incl, end № not incl);</code></td>
@@ -1266,6 +1278,30 @@ div { @include text-effect(danger); }</code></pre>
             <tr>
               <td><code>arr.splice(start № incl, hom much elems to remove not incl, what to insert);</code></td>
               <td>Changes basic array, 0 or empty disables 2nd param, empty disables 3rd param, arr.splice(start) will delete all after index</td>
+            </tr>
+            <tr>
+              <td><code>arr.filter(elem => elem > 2);</code></td>
+              <td>Makes new arr with passed through elems</td>
+            </tr>
+            <tr>
+              <td><code>arr.map(elem => elem + 2);</code></td>
+              <td>Every elem will be increased by 2, creates new arr</td>
+            </tr>
+            <tr>
+              <td><code>array2 = array1.map( (elem) => ({"titleInNewJSON": elem["Title"], "ratingInNewJSON": elem["Rating"]}));</code></td>
+              <td>Maping elements from JSON to new smaller JSON</td>
+            </tr>
+            <tr>
+              <td><code>[...arr], [...arr1, ...arr2], [...arr, var]</code></td>
+              <td>Spread operator. Example: Use to copy array</td>
+            </tr>
+            <tr>
+              <td><code>arr.join("joiner str");</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>str.split("splitter str");</code></td>
+              <td></td>
             </tr>
             <tr>
               <td><code>str.charAt(position);</code></td>
@@ -1280,8 +1316,28 @@ div { @include text-effect(danger); }</code></pre>
               <td></td>
             </tr>
             <tr>
-              <td><code>arr.filter(elem => elem > 2);</code></td>
-              <td>Makes new arr with passed through elems</td>
+              <td><code>str.substring(start incl, end not incl);</code></td>
+              <td>Returns part of a string</td>
+            </tr>
+            <tr>
+              <td><code>str.charCodeAt(index);</code></td>
+              <td>Returns unicode</td>
+            </tr>
+            <tr>
+              <td><code>String.fromCharCode(unicode);</code></td>
+              <td>Returns symbol</td>
+            </tr>
+            <tr>
+              <td><code>JSON.parse('{"x":5,"y":"false","z":"Some text","w":false,"v":"2006-01-02T12:04:05.000Z"}');</code></td>
+              <td>{x: 5, y: "false", z: "Some text", w: false, v: "2006-01-02T12:04:05.000Z"}</td>
+            </tr>
+            <tr>
+              <td><code>JSON.stringify({ x: 5, y: [new String('false'), "Some text", new Boolean(false), null, NaN, undefined, new Date(2006, 0, 2, 15, 4, 5), function(){}, Symbol('')] })</code></td>
+              <td>"{"x":5,"y":["false","Some text",false,null,null,null,"2006-01-02T12:04:05.000Z",null,null]}"</td>
+            </tr>
+            <tr>
+              <td><code>let reg = new RegExp(regStr);</code></td>
+              <td>Creating a regular expression with function</td>
             </tr>
             <tr>
               <td><code>condition ? returned if true : returned if false</code></td>
@@ -1292,29 +1348,9 @@ div { @include text-effect(danger); }</code></pre>
               <td>Var will be true/false</td>
             </tr>
             <tr>
-              <td><code>arr.map(elem => elem + 2);</code></td>
-              <td>Every elem will be increased by 2, creates new arr</td>
-            </tr>
-            <tr>
               <td><code>( function( ) { /* ... */ } )( );</code></td>
               <td><a href="https://en.wikipedia.org/wiki/Immediately_invoked_function_expression">Immediately invoked 
               function expression/self-executing anonymous function</a></td>
-            </tr>
-            <tr>
-              <td><code>[...arr], [...arr1, ...arr2], [...arr, var]</code></td>
-              <td>Spread operator. Example: Use to copy array</td>
-            </tr>
-            <tr>
-              <td><code>array2 = array1.map( (elem) => ({"titleInNewJSON": elem["Title"], "ratingInNewJSON": elem["Rating"]}));</code></td>
-              <td>Maping elements from JSON to new smaller JSON</td>
-            </tr>
-            <tr>
-              <td><code>arr.every( (elem) => );</code></td>
-              <td>Returns true/false</td>
-            </tr>
-            <tr>
-              <td><code>arr.some( (elem) => );</code></td>
-              <td>Returns true/false</td>
             </tr>
             <tr>
               <td>arguments</td>
@@ -1329,28 +1365,167 @@ div { @include text-effect(danger); }</code></pre>
               <td>Way to grab arguments</td>
             </tr>
             <tr>
-              <td><code>str.substring(start incl, end not incl);</code></td>
-              <td>Returns part of a string</td>
-            </tr>
-            <tr>
-              <td><code>str.charCodeAt(index);</code></td>
-              <td>Returns unicode</td>
-            </tr>
-            <tr>
-              <td><code>String.fromCharCode(unicode);</code></td>
-              <td>Returns symbol</td>
-            </tr>
-            <tr>
-              <td><code>let reg = new RegExp(regStr);</code></td>
-              <td>Creating a regular expression with function</td>
-            </tr>
-            <tr>
               <td><code>Object.assign(target, ...sources);</code></td>
               <td>Properties in the target object will be overwritten by properties in the sources if they have the same key. 
               Later sources' properties will overwrite earlier ones.</td>
             </tr>
           </tbody>
         </table>
+
+        <h2>Types and conversion</h2>
+        <table>
+          <caption>Strings, numbers, booleans, etc</caption>
+          <thead>
+            <tr>
+              <th>Conversion</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2">To string:</td>
+            </tr>
+            <tr>
+              <td><code>String(4)</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>"g" + 1 + false + "" = "g1false"</code></td>
+              <td>Concatenation. "String" + smth. </td>
+            </tr>
+            <tr>
+              <td><code>[] + 1 = "1"</code></td>
+              <td>Empty array converts to empty string</td>
+            </tr>
+            <tr>
+              <td><code>{} + 1 = "1"</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="2">To number:</td>
+            </tr>
+            <tr>
+              <td><code>Number("124")</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>5 + +"5" = 10</code></td>
+              <td>Unary plus</td>
+            </tr>
+            <tr>
+              <td><code>parseInt("15px", 10) = 15</code></td>
+              <td>10 is base</td>
+            </tr>
+            <tr>
+              <td colspan="2">To boolean:</td>
+            </tr>
+            <tr>
+              <td> 0, "", null, undefined, NaN -> false</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[], {} and anything else -> true</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>Boolean("1") = true</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>!!"string" = true</code></td>
+              <td>Double "not"</td>
+            </tr>
+            <tr>
+              <td>Native condition checking ("if" and other condition operators)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="2">Check type:</td>
+            </tr>
+            <tr>
+              <td><code>typeof("asd") -> string</code></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Context and .this</h2>
+        <table>
+          <caption></caption>
+          <thead>
+            <tr>
+              <th>Where</th>
+              <th>.this</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Inside function</td>
+              <td>Window</td>
+            </tr>
+            <tr>
+              <td>Inside function + "use strict"</td>
+              <td>Undefined</td>
+            </tr>
+            <tr>
+              <td>Function inside method or inside function and so on</td>
+              <td>Window</td>
+            </tr>
+            <tr>
+              <td>Object method</td>
+              <td>Object</td>
+            </tr>
+            <tr>
+              <td>Constructor (New)</td>
+              <td>Freshmade object via New</td>
+            </tr>
+            <tr>
+              <td>Setting exact context of function via <code>func.call(someVar)</code>, <code>func.apply(someVar)</code>, <code>func.bind(someVar)</code></td>
+              <td>someVar</td>
+            </tr>
+            <tr>
+              <td>Inside events, via <code>someElementOfDOM.addEventListener()</code></td>
+              <td>someElementOfDOM . <br> Note that arrow functions don't have "this"</td>
+            </tr>
+            <tr>
+              <td>Arrow function inside some scope with certain variable</td>
+              <td>Variable that is in the same scope as an arrow function or in a global scope if not in the current scope</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Reference code:</p>
+        <pre><code>let user = {
+  name: 'John'          
+};
+
+function sayName(surname, arg2) {
+  console.log(this);
+  console.log(this.name + " " + surname + " " + arg2);
+}
+
+function count(number) {
+  return this * number;
+}
+
+let double = count.bind(2);</code></pre>
+        <p>Comma seperated values as argument; Expected output: {name: "John"}; John Smith Brown</p>
+        
+        <pre><code>console.log(sayName.call(user, 'Smith', 'Brown'));</code></pre>
+        <p>Array as argument; Expected output: {name: "John}; John Snow Wick</p>
+        <pre><code>console.log(sayName.apply(user, ['Snow', 'Wick']));</code></pre>
+        <p>Expected output: 6</p>
+        <pre><code>console.log(double(3));</code></pre>
+        <p>bind() creates a new function that, when called, has its 'this' keyword set to the provided value, 
+          <br>with a given sequence of arguments preceding any provided when the new function was called. 
+          <br>Support: ECMAScript >= 5 (thus >= IE9)
+        </p>
+        <p>Unlike bind(), apply() and call():</p>
+        <ol>
+          <li>Accept additional parameters as well.</li>
+          <li>Executes the function it was called upon right away.</li>
+          <li>The call() and apply() methods do not make a copy of the function it is being called on.</li>
+        </ol>
         
         <h2>Objects</h2>
         <p>Simple object creation:</p>
@@ -1413,6 +1588,8 @@ myMixin.(myObject);</code></pre>
         <code>MyConstructor.keys(myObject);</code>
         <p>Looping through keys:</p>
         <code>for (let key in myObject) {...};</code>
+        <p>Looping through elements:</p>
+        <code>for (let element of myArrayOrStringOrMapOrSet) {...};</code>
         <p>Expected output: Array ["prop1", "prop2", "prop3"]. All props:</p>
         <code>Object.getOwnPropertyNames(myObject);</code>
         
@@ -1597,16 +1774,40 @@ myMixin.(myObject);</code></pre>
               <td><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Events, including event delegation</a></td>
               <td></td>
             </tr>
-            <tr>
+            <!-- <tr>
               <td></td>
+              <td></td>
+            </tr> -->
+        </table>
+
+        <h2>LocalStorage</h2>
+        <table>
+          <caption>window.localStorage database</caption>
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>localStorage.setItem('myCat', 'Tom');</code></td>
               <td></td>
             </tr>
             <tr>
-              <td></td>
+              <td><code>localStorage.getItem('myCat');</code></td>
               <td></td>
             </tr>
             <tr>
+              <td><code>localStorage.removeItem('myCat');</code></td>
               <td></td>
+            </tr>
+            <tr>
+              <td><code>localStorage.clear();</code></td>
               <td></td>
             </tr>
           </tbody>
@@ -1618,14 +1819,73 @@ myMixin.(myObject);</code></pre>
   console.log("action");
   setTimeout(funcName, 2000);
 });</code></pre>
-        <p></p>
-        <pre><code></code></pre>
-        <p></p>
-        <pre><code></code></pre>
-        <p></p>
-        <pre><code></code></pre>
-        <p></p>
-        <pre><code></code></pre>
+        <p>Custom error definition via 'throw':</p>
+        <pre><code>function getRectArea(width, height) {
+  if (isNaN(width) || isNaN(height)) {
+    throw 'Parameter is not a number!';
+  }
+}
+
+try {
+  getRectArea(3, 'A');
+} catch (e) {
+  console.error(e);
+  // expected output: "Parameter is not a number!"
+}</code></pre>
+        <p>try...catch...finaly... and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error object</a>:</p>
+        <pre><code>let json = '{"id":2}';
+try {
+  let user = JSON.parse(json);
+  console.log(user);
+
+  if (!user.name) {
+    throw new Error("Name doesn't exist");
+  }
+}
+catch(error) {
+  console.log(error.name);
+  console.log(error.message);
+  console.log(error.stack);
+  console.log(`We got ${error.name}`);
+} finaly {
+  console.log("It was executed anyway neither there is error or not");
+}</code></pre>
+        <p>ES6 class syntax</p>
+        <pre><code><span class="codeComment">//Classname starts for capital letter</span>
+class Options {
+    <span class="codeComment">//Default values in constructor</span>
+    constructor (height = 100, width = 100, bg = 'grey', fontSize = 16, textAlign = 'center', text = 'Hello World!') {
+        this.height = height + 'px';
+        this.width = width + 'px';
+        this.bg = bg;
+        this.fontSize = fontSize + 'px';
+        this.textAlign = textAlign;
+        this.text = text;
+    }
+    <span class="codeComment">//Class method definition</span>
+    newDiv (text = this.text, cssTextRules) {
+        let newElement = document.createElement('div');
+        <span class="codeComment">//Backticks</span>
+        newElement.innerHTML = `${text}`;
+        <span class="codeComment">//CSS definition</span>
+        newElement.style.cssText = 
+            `height: ${this.height};
+              width: ${this.width}; 
+              background: ${this.bg}; 
+              font-size: ${this.fontSize}; 
+              text-align: ${this.textAlign}`;
+        document.body.appendChild(newElement);
+    }
+}
+
+<span class="codeComment">//Methods testing</span>
+let newObj = new Options(200, 200, 'green', 20, 'center', 'aaaaaaaaaaaaaaaaaa');
+newObj.newDiv();
+
+let oldObj = new Options();
+oldObj.newDiv();</code></pre>
+        <!-- <p></p>
+        <pre><code></code></pre> -->
       </section>
 		  
       <section id="Regex" class="main-section">
@@ -2264,9 +2524,9 @@ ReactDOM.render(
               <td colspan="2">
                 # Set as alias in bash or terminal emulator: <br>
                 alias gs=git status<br>
-                alias ga=git add<br>
+                alias ga=git add $*<br>
                 alias gb=git branch<br>
-                alias gc=git commit<br>
+                alias gc=git commit -m $*<br>
                 alias gd=git diff<br>
                 alias gco=git checkout<br>
                 alias gk=gitk --all&<br>
@@ -2503,7 +2763,7 @@ ReactDOM.render(
             </tr>
             <tr>
               <td>git reset HEAD %filenameS</td>
-              <td>resets changes in buffer zone (files won't change ar this point)</td>
+              <td>resets changes in buffer zone (files won't change at this point)</td>
             </tr>
             <tr>
               <td>git checkout %filenameS</td>
