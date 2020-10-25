@@ -148,9 +148,11 @@ kbd {
       color: lightgreen; }
     #documentation section pre {
       background-color: #282c34;
-      padding: 5px;
+      padding: 10px;
       border-radius: 5px;
       width: fit-content; }
+      #documentation section pre samp, #documentation section pre code {
+        padding: 0; }
     #documentation section p {
       padding: 10px 0;
       font-family: sans-serif; }
